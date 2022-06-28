@@ -9,7 +9,6 @@ MARGIN = 0.15
 
 URL_FONT = ImageFont.truetype('FiraSans-Light.otf', 20)
 SONG_FONT = ImageFont.truetype('FiraSans-LightItalic.otf', 32)
-SONGS = pd.read_csv('songs.csv')
 
 
 def make_image(row):
@@ -50,4 +49,5 @@ def make_image(row):
 
 
 if __name__ == '__main__':
-    SONGS['images'] = SONGS.apply(make_image, axis=1)
+    songs_csv = pd.read_csv('songs.csv')
+    songs_csv['images'] = songs_csv.apply(make_image, axis=1)
