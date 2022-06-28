@@ -12,7 +12,7 @@ SONG_FONT = ImageFont.truetype('FiraSans-LightItalic.otf', 32)
 SONGS = pd.read_csv('songs.csv')
 
 
-def make_images(row):
+def make_image(row):
     url = row['url']
     artist = row['artist']
     title = row['title']
@@ -50,4 +50,4 @@ def make_images(row):
 
 
 if __name__ == '__main__':
-    SONGS['images'] = SONGS.apply(make_images, axis=1)
+    SONGS['images'] = SONGS.apply(make_image, axis=1)
