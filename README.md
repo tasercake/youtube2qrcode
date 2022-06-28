@@ -1,6 +1,26 @@
 
 # youtube2qrcode
-Generate Pretty, Printable QR Codes From YouTube URLs
+
+Generate Pretty, Printable QR Codes From YouTube URLs.
+
+**I threw this together to quickly generate QR codes for a bunch of music videos** - this may not work for your use case out of the box, but it's simple enough to change as you wish
+
+QR code generation requires the following as input:
+
+- YouTube URL (or any other URL)
+- Artist's name (video creator's name)
+- Song name (video title)
+
+# Usage
+
+1. Clone this repo
+2. Modify `songs.csv` to include any information you want
+  - Generated QR codes will include the artist name & song title in the format `{artist} - {title}` and the video's URL
+3. Run this command:
+
+    ```shell
+    python generate.py
+    ```
 
 # Examples
 
